@@ -12,5 +12,6 @@ model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='mean_squared_error',optimizer='adam', metrics=['binary_accuracy'])
 model.fit(training_data, target_data, nb_epoch=500, verbose=2)
+#nb_epoch are the number of iterations and after each epoch the model trains itself and try to minimize the loss
 
 print model.predict(training_data).round()
